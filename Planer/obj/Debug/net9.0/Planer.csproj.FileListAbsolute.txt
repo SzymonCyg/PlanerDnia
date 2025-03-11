@@ -64,3 +64,4 @@
 /home/szymonc/RiderProjects/Planer/Planer/obj/Debug/net9.0/Planer.csproj.Up2Date
 /home/szymonc/RiderProjects/Planer/Planer/obj/Debug/net9.0/Planer.genruntimeconfig.cache
 /home/szymonc/RiderProjects/Planer/Planer/obj/Debug/net9.0/ref/Planer.dll
+/home/szymonc/RiderProjects/Planer/Planer/obj/Debug/net9.0/Planer.sourcelink.json

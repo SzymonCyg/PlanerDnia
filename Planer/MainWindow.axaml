@@ -6,12 +6,21 @@
         x:Class="Planer.MainWindow"
         Title="Planer">
     <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-        <TextBox Name="TextBox" Width="200" Height="50" Margin="20">Podaj nazwe zadania</TextBox>
-        <ComboBox Name="Kategoria" Width="200" Height="50" Margin="20" SelectedIndex="0">
+        <StackPanel>
+        <TextBox x:Name="TextBox" Width="200" Height="50" Margin="20" Watermark="Wpisz zadanie"/>
+        <ComboBox x:Name="Kategoria" Width="200" Height="50" Margin="20" SelectedIndex="0">
             <ComboBoxItem Content="Kategoria zadania"/>
             <ComboBoxItem Content="Praca"/>
             <ComboBoxItem Content="Relaks"/>
             <ComboBoxItem Content="Zakupy"/>
         </ComboBox>
+        <Button x:Name="SubmitButton" Content="Wyślij zadanie"
+                Width="200" Margin="20"
+        />
+        </StackPanel>
+        <Grid>
+            
+        </Grid>
     </StackPanel>
+
 </Window>
