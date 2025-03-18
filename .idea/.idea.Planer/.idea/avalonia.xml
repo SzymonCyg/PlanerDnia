@@ -3,6 +3,7 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="Planer/App.axaml" value="Planer/Planer.csproj" />
         <entry key="Planer/MainWindow.axaml" value="Planer/Planer.csproj" />
       </map>
     </option>

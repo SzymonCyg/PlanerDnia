@@ -18,21 +18,21 @@
                 Width="200" Margin="20"
         />
         </StackPanel>
-        <Grid>
+        <Grid x:Name="MainGrid">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="0" Grid.Row="0" Margin="20" Text="" />
-            <ComboBox Grid.Column="1" Grid.Row="0" Width="200" Height="50" Margin="20" SelectedIndex="">
+            <TextBlock Grid.Column="0" Grid.Row="0" x:Name="TextBlockZad" Margin="20" Text="" />
+            <ComboBox Grid.Column="1" Grid.Row="0" x:Name="ComboBoxZad" Width="200" Height="50" Margin="20">
                 <ComboBoxItem Content="Kategoria zadania"/>
                 <ComboBoxItem Content="Praca"/>
                 <ComboBoxItem Content="Relaks"/>
                 <ComboBoxItem Content="Zakupy"/>
             </ComboBox>
-            <CheckBox Grid.Column="2" Grid.Row="0" Margin="20">Czy ukończone</CheckBox>
+            <CheckBox Grid.Column="2" Grid.Row="0" x:Name="CheckBoxZad" Margin="20">Czy ukończone</CheckBox>
             <Button Grid.Column="3" x:Name="ClearButton" Content="Usuń zadanie"
                     Width="200" Margin="20"/>
         </Grid>

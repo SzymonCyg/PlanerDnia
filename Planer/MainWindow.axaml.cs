@@ -6,25 +6,35 @@ namespace Planer;
 
 public partial class MainWindow : Window
 {
+
     public MainWindow()
     {
         InitializeComponent();
         SubmitButton.Click += SubmitButton_Click;
+        ClearButton.Click += ClearButton_Click;
     }
+
+    private void ClearButton_Click(object? sender, RoutedEventArgs e)
+    {
+       CheckBoxZad.IsChecked = false;
+        TextBlockZad.Text = null;
+        ComboBoxZad = null;
+    }
+
+
     private void SubmitButton_Click(object? sender, RoutedEventArgs e)
     {
-        try
-        {
-            var checkBoxValue = CheckBox.IsChecked == true ? "Ukończono zadanie" : "Nie ukończono zadania";
-            var textBoxValue = TextBox.Text;
-            var 
+        var Checkbox= CheckBoxZad.IsChecked == true ? "Ukończono zadanie" : "Nie ukończono zadania";
+        TextBlockZad.Text = TextBox.Text;
+        ComboBoxZad.SelectedItem = Kategoria.SelectedItem;
 
-        }
-        catch (Exception ex)
-        {
-            Podsumowanie.Text = ex.Message;
-        }
-        
-      
+
+
+
+
+
+
+
+
     }
 }
