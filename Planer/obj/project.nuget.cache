@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Uu78Y48pNrk=",
+  "dgSpecHash": "AZuQ9scawg8=",
   "success": true,
-  "projectFilePath": "/home/szymonc/RiderProjects/Planer/Planer/Planer.csproj",
+  "projectFilePath": "/home/szymonc/RiderProjects/PlanerDnia1/Planer/Planer.csproj",
   "expectedPackageFiles": [
     "/home/szymonc/.nuget/packages/avalonia/11.2.1/avalonia.11.2.1.nupkg.sha512",
     "/home/szymonc/.nuget/packages/avalonia.angle.windows.natives/2.1.22045.20230930/avalonia.angle.windows.natives.2.1.22045.20230930.nupkg.sha512",

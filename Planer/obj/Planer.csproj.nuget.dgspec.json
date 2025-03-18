@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/szymonc/RiderProjects/Planer/Planer/Planer.csproj": {}
+    "/home/szymonc/RiderProjects/PlanerDnia1/Planer/Planer.csproj": {}
   },
   "projects": {
-    "/home/szymonc/RiderProjects/Planer/Planer/Planer.csproj": {
+    "/home/szymonc/RiderProjects/PlanerDnia1/Planer/Planer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/szymonc/RiderProjects/Planer/Planer/Planer.csproj",
+        "projectUniqueName": "/home/szymonc/RiderProjects/PlanerDnia1/Planer/Planer.csproj",
         "projectName": "Planer",
-        "projectPath": "/home/szymonc/RiderProjects/Planer/Planer/Planer.csproj",
+        "projectPath": "/home/szymonc/RiderProjects/PlanerDnia1/Planer/Planer.csproj",
         "packagesPath": "/home/szymonc/.nuget/packages/",
-        "outputPath": "/home/szymonc/RiderProjects/Planer/Planer/obj/",
+        "outputPath": "/home/szymonc/RiderProjects/PlanerDnia1/Planer/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/szymonc/.nuget/NuGet/NuGet.Config"
