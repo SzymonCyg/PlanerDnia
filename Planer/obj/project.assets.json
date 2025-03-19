@@ -1426,24 +1426,27 @@
     ]
   },
   "packageFolders": {
-    "/home/szymonc/.nuget/packages/": {}
+    "C:\\Users\\szymo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/szymonc/RiderProjects/PlanerDnia1/Planer/Planer.csproj",
+      "projectUniqueName": "C:\\Users\\szymo\\RiderProjects\\PlanerDnia\\Planer\\Planer.csproj",
       "projectName": "Planer",
-      "projectPath": "/home/szymonc/RiderProjects/PlanerDnia1/Planer/Planer.csproj",
-      "packagesPath": "/home/szymonc/.nuget/packages/",
-      "outputPath": "/home/szymonc/RiderProjects/PlanerDnia1/Planer/obj/",
+      "projectPath": "C:\\Users\\szymo\\RiderProjects\\PlanerDnia\\Planer\\Planer.csproj",
+      "packagesPath": "C:\\Users\\szymo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\szymo\\RiderProjects\\PlanerDnia\\Planer\\obj\\",
       "projectStyle": "PackageReference",
+      "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
-        "/home/szymonc/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\szymo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1461,8 +1464,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "all"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+      }
     },
     "frameworks": {
       "net9.0": {
@@ -1505,7 +1507,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/szymonc/.dotnet/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\szymo\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
