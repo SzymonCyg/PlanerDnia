@@ -1,8 +1,9 @@
-using System;
-using System.Collections.ObjectModel;
-using System.Linq;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using System.Collections.Generic;
+using System.Linq;
+using Avalonia;
+using Avalonia.Layout;
 
 namespace Planer;
 
@@ -11,44 +12,70 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        SubmitButton.Click += SubmitButton_Click;
-        ClearButton.Click += ClearButton_Click;
     }
-
-    private void ClearButton_Click(object? sender, RoutedEventArgs e)
+    
+    
+    
+    public List<ListBoxItem> addedItems = new List<ListBoxItem>();
+    public void SubmitButton_Click(object? sender, RoutedEventArgs e)
     {
-        var noweZadanie = new Zadanie
+        var comboBoxValue = (ComboBox.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "No selection";
+        var textBoxValue = TextBox.Text;
+
+        
+        var newItem = new ListBoxItem();
+
+        
+        var checkBox = new CheckBox { Content = "Czy zrobione?", Name = "MyCheckBox"};
+
+        
+        var textBlock = new TextBlock { Text = $"{textBoxValue} : {comboBoxValue}"};
+
+        
+        newItem.Content = new StackPanel
         {
-            Nazwa = " ",
-            Kategoria = null,
-            CzyUkonczone = 
+            Orientation = Orientation.Vertical,
+            Children =
+            {
+                textBlock,
+                checkBox
+            }
         };
-        Podsumowanie.Text = (noweZadanie.Nazwa + noweZadanie.Kategoria + noweZadanie.CzyUkonczone).ToString();
+
+        
+        ListBox.Items.Add(newItem);
+        
+        
+        addedItems.Add(newItem);
+        
     }
 
-
-    private void SubmitButton_Click(object? sender, RoutedEventArgs e)
+    public void SaveButton_Click(object? sender, RoutedEventArgs e)
     {
-        TextBlockZad.Text = TextBox.Text;
-        ComboBoxZad.SelectedIndex = Kategoria.SelectedIndex;
+        int zadania = ListBox.Items.Count;
+        int ukonczoneZad = 0;
 
-        var noweZadanie = new Zadanie
+        foreach (var item in ListBox.Items)
         {
-            Nazwa = TextBox.Text,
-            Kategoria = ((ComboBoxItem)Kategoria.SelectedItem).Content.ToString(),
-            CzyUkonczone = CheckBoxZad.IsChecked == true
-        };
+            if (item is ListBoxItem listBoxItem && listBoxItem.Content is StackPanel panel)
+            {
+                var checkBox = panel.Children.OfType<CheckBox>().FirstOrDefault();
+                if (checkBox != null && checkBox.IsChecked == true)
+                {
+                    ukonczoneZad++;
+                }
+            }
+        }
 
-
-        Podsumowanie.Text = (noweZadanie.Nazwa + noweZadanie.Kategoria + noweZadanie.CzyUkonczone).ToString();
-
-
+        TextBlock.Text = $"Zadania: {zadania}, Ukończone: {ukonczoneZad}";
     }
-
-    public class Zadanie
+    public void ClearButton_Click(object? sender, RoutedEventArgs e)
     {
-        public string Nazwa { get; set; }
-        public string Kategoria { get; set; }
-        public bool CzyUkonczone { get; set; }
+        if (addedItems.Any()) 
+        {
+            var itemToRemove = addedItems.Last(); 
+            ListBox.Items.Remove(itemToRemove);   
+            addedItems.Remove(itemToRemove);      
+        }
     }
 }

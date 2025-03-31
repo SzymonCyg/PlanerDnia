@@ -5,40 +5,50 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Planer.MainWindow"
         Title="Planer">
-    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-        <TextBox x:Name="TextBox" Width="200" Height="50" Margin="20" Watermark="Wpisz zadanie"/>
-        <ComboBox x:Name="Kategoria" Width="200" Height="50" Margin="20" SelectedIndex="0">
-            <ComboBoxItem Content="Kategoria zadania"/>
-            <ComboBoxItem Content="Praca"/>
+    <StackPanel>
+        <TextBox x:Name="TextBox" Width="200" Height="30" Watermark="Wpisz nazwe zadania" 
+                 Margin="30,20,30,10"
+        />
+                
+        <ComboBox x:Name="ComboBox" Width="200" Margin="10" HorizontalAlignment="Center">
+            <ComboBoxItem Content="Szkoła"/>
             <ComboBoxItem Content="Relaks"/>
             <ComboBoxItem Content="Zakupy"/>
+            <ComboBoxItem Content="Trening"/>
         </ComboBox>
-        <Button x:Name="SubmitButton" Content="Wyślij zadanie"
-                Width="200" Margin="20"
+                
+        <Button x:Name="SubmitButton" Content="Utwórz"
+                Click="SubmitButton_Click"
+                HorizontalAlignment="Center"
+                HorizontalContentAlignment="Center"
+                Width="100" Margin="0,20,0,0" 
+                CornerRadius="20"
+                        
         />
-        </StackPanel>
-        <Grid x:Name="MainGrid">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="3*"/>
-            </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="0" Grid.Row="0" x:Name="TextBlockZad" Margin="20" Text="" />
-            <ComboBox Grid.Column="1" Grid.Row="0" x:Name="ComboBoxZad" Width="200" Height="50" Margin="20">
-                <ComboBoxItem Content="Kategoria zadania"/>
-                <ComboBoxItem Content="Praca"/>
-                <ComboBoxItem Content="Relaks"/>
-                <ComboBoxItem Content="Zakupy"/>
-            </ComboBox>
-            <CheckBox Grid.Column="2" Grid.Row="0" x:Name="CheckBoxZad" Margin="20">Czy ukończone</CheckBox>
-            <Button Grid.Column="3" x:Name="ClearButton" Content="Usuń zadanie"
-                    Width="200" Margin="20"/>
-        </Grid>
-        <StackPanel>
-            <TextBlock x:Name="Podsumowanie"></TextBlock>
-        </StackPanel>
+                
+        <ListBox x:Name="ListBox" Width="400" Margin="0 20 0 0">
+                    
+        </ListBox>
+                
+        <Button x:Name="SaveButton" Content="Zapisz"
+                Click="SaveButton_Click"
+                HorizontalAlignment="Center"
+                HorizontalContentAlignment="Center"
+                Width="100" Margin="0,20,0,0" 
+                CornerRadius="20"
+                        
+        />
+                
+        <Button x:Name="ClearButton" Content="Usuń"
+                Click="ClearButton_Click"
+                HorizontalAlignment="Center"
+                HorizontalContentAlignment="Center"
+                Width="100" Margin="0,20,0,0" 
+                CornerRadius="20"
+                        
+        />
+                
+        <TextBlock x:Name="TextBlock" Width="300" Margin="0,20,0,0" />
+                
     </StackPanel>
-
 </Window>

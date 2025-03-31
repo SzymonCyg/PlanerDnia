@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Planer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+67a9a8a3ad4eec76f9e6df29de6cab4e39da4bf4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5aa7263d25a14e173974866223fa2a2a2f491f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Planer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Planer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
